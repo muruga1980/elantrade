@@ -1,0 +1,462 @@
+/* ============================================
+   ÉLAN TRADELINKS LLP - Responsive Styles
+   Additional responsive enhancements
+   ============================================ */
+
+/* Mobile Navigation Enhancements */
+@media (max-width: 768px) {
+  .mobile-nav a {
+    font-size: 1.1rem;
+    padding: 16px 0;
+  }
+
+  .hero-content {
+    padding: 100px 16px 60px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    letter-spacing: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+    padding: 0 8px;
+  }
+
+  .hero-title .hero-title-line {
+    display: inline;
+  }
+
+  .hero-subtitle {
+    padding: 0 16px;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .map-regions-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .map-visual {
+    padding: 24px 16px;
+    min-height: auto;
+  }
+
+  .map-region {
+    padding: 16px 14px;
+  }
+
+  .map-region h4 {
+    font-size: 1rem;
+  }
+
+  .map-region p {
+    font-size: 0.85rem;
+  }
+
+  .product-card-image {
+    height: 180px;
+  }
+
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .product-sidebar-card {
+    padding: 20px;
+  }
+
+  .product-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-item-card {
+    padding: 12px 14px;
+  }
+
+  .product-item-card .item-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .product-item-card .item-name {
+    font-size: 0.82rem;
+  }
+
+  .product-category-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .product-subcategory h3 {
+    font-size: 1rem;
+  }
+
+  .mega-menu {
+    display: none;
+  }
+
+  .nav-item > a .dropdown-arrow {
+    display: none;
+  }
+
+  .service-item {
+    padding: 24px 0 24px 24px;
+  }
+
+  .service-item::before {
+    left: -27px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .market-stat-card {
+    padding: 24px;
+  }
+
+  .market-stat-card .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .contact-cta-section {
+    padding: 60px 0;
+  }
+
+  .site-footer {
+    padding: 60px 0 0;
+  }
+
+  .footer-grid {
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .page-header {
+    padding: 120px 0 60px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .leader-card-image {
+    height: 250px;
+  }
+
+  .map-embed iframe {
+    height: 280px;
+  }
+
+  .why-card {
+    padding: 32px 24px;
+  }
+
+  .industry-card {
+    padding: 24px 20px;
+  }
+
+  .contact-info-card {
+    padding: 28px 20px;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .form-control {
+    padding: 12px 14px;
+  }
+
+  .submit-btn {
+    padding: 14px 24px;
+  }
+
+  .success-alert {
+    right: 16px;
+    left: 16px;
+    top: auto;
+    bottom: 20px;
+    width: auto;
+    max-width: none;
+  }
+
+  .error-number {
+    font-size: 8rem;
+  }
+
+  .error-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .error-page p {
+    font-size: 1rem;
+  }
+
+  .float-shape {
+    display: none;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+  }
+
+  .main-nav .cta-button {
+    display: none;
+  }
+
+  .brochure-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .brochure-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .brochure-content p {
+    font-size: 1rem;
+  }
+
+  .brochure-card {
+    padding: 24px;
+  }
+
+  .brochure-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brochure-icon .material-icons {
+    font-size: 2rem;
+  }
+
+  .download-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-modal {
+    max-width: 100%;
+  }
+
+  .whatsapp-modal-header {
+    padding: 16px 20px;
+  }
+
+  .whatsapp-modal-body {
+    padding: 20px;
+  }
+
+  .whatsapp-message {
+    padding: 14px 16px;
+  }
+
+  .whatsapp-modal-btn {
+    padding: 12px 20px;
+  }
+}
+
+/* Tablet enhancements */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brochure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .markets-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .product-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mega-menu {
+    width: 700px;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-layout {
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+  }
+
+  .product-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mega-menu {
+    width: 750px;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .why-card:hover {
+    transform: none;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+  .industry-card:hover {
+    transform: none;
+  }
+
+  .service-item:hover::before {
+    transform: none;
+  }
+
+  .about-image:hover img {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .cta-button {
+    border-width: 3px;
+  }
+
+  .form-control:focus {
+    outline: 3px solid var(--primary-color);
+  }
+
+  .main-nav a::after {
+    height: 3px;
+  }
+}
+
+/* Dark mode support (if user prefers) */
+@media (prefers-color-scheme: dark) {
+  body:not(.force-light) {
+    background: #0a0a0a;
+    color: #f0f0f0;
+  }
+}
