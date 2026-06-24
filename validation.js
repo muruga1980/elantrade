@@ -84,33 +84,49 @@
                     // Disable submit button
                     $submitBtn.prop('disabled', true).html('<span class="material-icons">hourglass_empty</span> Sending...');
 
-                    // Web3Forms integration (dummy API)
+                    // Web3Forms live submission
                     const formData = new FormData(form);
                     const action = form.getAttribute('action') || 'https://api.web3forms.com/submit';
-                    const accessKey = form.querySelector('[name="cbc7d883-ef24-431a-849d-cf9cbbf31915"]');
-                    
-                    // Simulate Web3Forms submission
-                    // In production, replace with actual Web3Forms access key
-                    setTimeout(function() {
-                        // Success simulation
-                        if (window.showSuccessAlert) {
-                            window.showSuccessAlert('Thank you! Your enquiry has been submitted successfully. We will contact you within 24 hours.');
+
+                    fetch(action, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        if (data.success) {
+                            if (window.showSuccessAlert) {
+                                window.showSuccessAlert('Thank you! Your enquiry has been submitted successfully. We will contact you within 24 hours.');
+                            } else {
+                                alert('Thank you! Your enquiry has been submitted successfully.');
+                            }
+                            form.reset();
+                            $(form).find('.form-group').removeClass('has-error');
+                            $(form).find('.error').removeClass('error');
+                            $(form).find('.valid').removeClass('valid');
+                            $(form).find('.error-message').remove();
                         } else {
-                            alert('Thank you! Your enquiry has been submitted successfully.');
+                            var errorMsg = data.message || 'Something went wrong. Please try again or contact us directly.';
+                            if (window.showSuccessAlert) {
+                                window.showSuccessAlert(errorMsg);
+                            } else {
+                                alert(errorMsg);
+                            }
                         }
-                        
-                        // Reset form
-                        form.reset();
-                        
-                        // Re-enable button
+                    })
+                    .catch(function(error) {
+                        console.error('Web3Forms submission error:', error);
+                        if (window.showSuccessAlert) {
+                            window.showSuccessAlert('Network error. Please check your connection and try again, or contact us directly.');
+                        } else {
+                            alert('Network error. Please check your connection and try again.');
+                        }
+                    })
+                    .finally(function() {
                         $submitBtn.prop('disabled', false).html(originalText);
-                        
-                        // Remove validation classes
-                        $(form).find('.form-group').removeClass('has-error');
-                        $(form).find('.error').removeClass('error');
-                        $(form).find('.valid').removeClass('valid');
-                        $(form).find('.error-message').remove();
-                    }, 1500);
+                    });
 
                     return false;
                 }

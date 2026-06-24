@@ -204,9 +204,11 @@
                     <div class="contact-info-card" style="margin-bottom: 32px;">
                         <h3><span class="material-icons">edit</span> Send Enquiry</h3>
                         <form id="contactForm" method="POST" action="https://api.web3forms.com/submit" novalidate>
-                            <input type="hidden" name="access_key" value="cbc7d883-ef24-431a-849d-cf9cbbf31915">
+                         <input type="hidden" name="access_key" value="cbc7d883-ef24-431a-849d-cf9cbbf31915" />
                             <input type="hidden" name="subject" value="New Enquiry from ELÁN TRADELINKS Website">
                             <input type="hidden" name="from_name" value="ELÁN Website Contact Form">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+                            <input type="hidden" name="redirect" value="https://www.elantradelink.com/contact.html?success=true">
 
                             <div class="form-group">
                                 <label for="fullName" class="required">Full Name</label>
@@ -232,11 +234,12 @@
                                 <label for="productInterest">Product Interest</label>
                                 <select id="productInterest" name="productInterest" class="form-control">
                                     <option value="">Select a product category</option>
-                                    <option value="Elemental Sulphur">Elemental Sulphur</option>
-                                    <option value="Petroleum Products">Petroleum Products</option>
-                                    <option value="Hydrocarbons & Solvents">Hydrocarbons & Solvents</option>
-                                    <option value="Oilfield Solutions">Oilfield Solutions</option>
-                                    <option value="Alcohols & Glycols">Alcohols & Glycols</option>
+                                    <option value="Industrial Chemicals">Industrial Chemicals</option>
+                                    <option value="Monomers & Performance Chemicals">Monomers & Performance Chemicals</option>
+                                    <option value="Alcohols, Glycols & Amines">Alcohols, Glycols & Amines</option>
+                                    <option value="Water Treatment & Oilfield">Water Treatment & Oilfield</option>
+                                    <option value="Acids, Alkalis & Inorganic Salts">Acids, Alkalis & Inorganic Salts</option>
+                                    <option value="Sulphur & Energy Products">Sulphur & Energy Products</option>
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
@@ -252,7 +255,6 @@
                             </button>
                         </form>
                     </div>
-
                     <div class="map-embed">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.3848!2d55.3684!3d25.2867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE3JzEyLjEiTiA1NcKwMjInMDYuMiJF!5e0!3m2!1sen!2sae!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ELÁN TRADELINKS Office Location"></iframe>
                     </div>
