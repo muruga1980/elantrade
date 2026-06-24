@@ -87,7 +87,7 @@
                     // Web3Forms integration (dummy API)
                     const formData = new FormData(form);
                     const action = form.getAttribute('action') || 'https://api.web3forms.com/submit';
-                    const accessKey = form.querySelector('[name="access_key"]');
+                    const accessKey = form.querySelector('[name="cbc7d883-ef24-431a-849d-cf9cbbf31915"]');
                     
                     // Simulate Web3Forms submission
                     // In production, replace with actual Web3Forms access key
